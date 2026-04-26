@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>NaVGo</title>
+</head>
+
+<body style="background-color: #E9F7EF">
+
+    <nav id="navmenu" class="navbar navbar-expand-lg sticky-top">
+        <a class="navbar-brand">
+            <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+            <span>NavGo</span></br>
+        </a>
+        <button id="nav-toggle" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span id="nav-toggle-icon" class="fas fa-ellipsis-v"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="navmenu-links" class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#project-scope" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Project Scope
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#milestones">Milestones</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#downloads">Downloads</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <div class="hero-cta">
+                <h1>FinSight <br />AI Platform for Cloud FinOps</h1>
+                <a class="btn btn-outline-light" type="button" href="#project-scope"><span class="btn-text">Learn
+                        More</span><span class="fas fa-chevron-right btn-icon"></span></a>
+            </div>
+        </div>
+        <div class="hero-cover">
+            <img class="hero-image" src="images/backgound.png" alt="FinSight hero background">
+            <div class="hero-overlay"></div>
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        </div>
+        <section/>
+
+        <!-- project-scope -->
+        <section id="project-scope" class="main-sections finsight-scope" style="background-color:#FDFEFE">
+            <div class="container">
+                <h4 class="section-headings">Project Scope</h4>
+                
+                
+                <h2 class="pb-1 pt-5 text-center mb-3 display-5 scope-title">Abstract</h2>
+                <h3 class="text-center mb-4 scope-subtitle">FinSight: An Integrated AI Platform for Cloud Financial Operations and Security</h3>
+                <p class="scope-abstract" style="text-align: justify;">
+                    Cloud waste resulting from inefficient management of diverse computing environments has become a significant industrial challenge, driven by fragmented vendor tools and complex infrastructures. This paper introduces FinSight, an integrated artificial intelligence platform designed to address these inefficiencies through four primary components: Anomaly Detection (identifying financial and operational irregularities), Cost Optimization (implementing automated expenditure reduction), Resource Forecasting (utilizing predictive analytics for future scaling), and Zero Trust Security (ensuring secure data handling and access control).
+                </p>
+                <p class="scope-abstract" style="text-align: justify;">
+                    By leveraging machine learning models such as Long Short-Term Memory (LSTM) networks and Isolation Forest algorithms, the platform provides proactive oversight across Microsoft Azure and Virtual Private Server (VPS) environments. The methodology integrates automated optimization strategies and predictive forecasting to reduce expenditure, while a Zero Trust framework ensures secure operations. This study details the system architecture and technical implementation of these four pillars, demonstrating FinSight's potential as a comprehensive and secure solution for modern cloud financial operations (FinOps).
+                </p>
+
+                <div id="methodology" class="sub-section">
+                    <h2 class="methodology-title">Our Methodology</h2>
+                    <p class="methodology-intro" style="text-align: justify;">
+                        FinSight is built on a modular architecture designed to seamlessly integrate four core pillars: Anomaly Detection, Cost Optimization, Resource Forecasting, and Zero Trust Security. This cohesive ecosystem ensures real-time insights and secure cloud financial management.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 pt-4">
+                            <div class="method-card">
+                            <h4>1. System Architecture &amp; Data Flow</h4>
+                            <p style="text-align: justify;">
+                                Designed for high-throughput data processing and cross-platform interoperability, our architecture operates across three distinct layers:
+                            </p>
+                            <ul class="method-list">
+                                <li><strong>Ingestion Layer:</strong> We securely pull billing telemetry and resource utilization logs from Microsoft Azure (via the Cost Management API) and Virtual Private Servers (via custom telemetry agents).</li>
+                                <li><strong>Data Lake &amp; Preprocessing:</strong> Data is normalized into a unified schema, stripping away platform-specific noise to ensure our AI models receive clean, consistent inputs.</li>
+                                <li><strong>High-Concurrency Backend:</strong> Powered by Node.js, our backend infrastructure guarantees real-time responsiveness for the user dashboard.</li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pt-4">
+                            <div class="method-card">
+                            <h4>2. AI-Driven Anomaly Detection</h4>
+                            <p style="text-align: justify;">
+                                To catch fiscal irregularities before they spiral out of control, FinSight relies on advanced, unsupervised machine learning:
+                            </p>
+                            <ul class="method-list">
+                                <li><strong>Isolation Forest Algorithm:</strong> Unlike traditional distance-based models, this algorithm is purpose-built for high-dimensional cloud data. It isolates anomalies rapidly by identifying data points that are few and far different.</li>
+                                <li><strong>Explainable AI (SHAP):</strong> By integrating SHapley Additive exPlanations (SHAP), FinSight attributes specific cost spikes to exact resources, such as an unattached Azure disk, and provides highly actionable context.</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 pt-4">
+                            <div class="method-card">
+                            <h4>3. Predictive Resource Forecasting</h4>
+                            <p style="text-align: justify;">
+                                We leverage a hybrid AI approach to predict future expenditures and alert teams to potential budget breaches before they happen. Our models are optimized to maintain a Mean Absolute Error (MAE) of less than 5%.
+                            </p>
+                            <ul class="method-list">
+                                <li><strong>LSTM Neural Networks:</strong> Captures long-term dependencies and non-linear patterns in daily spending.</li>
+                                <li><strong>Facebook Prophet:</strong> Accurately models strong seasonal trends, such as month-end processing spikes.</li>
+                            </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pt-4">
+                            <div class="method-card">
+                            <h4>4. Automated Cost Optimization</h4>
+                            <p style="text-align: justify;">
+                                FinSight actively identifies cloud waste and provides actionable optimization strategies across three main categories:
+                            </p>
+                            <ul class="method-list">
+                                <li><strong>Zombie Resources:</strong> Identifies unattached disks or idle load balancers for immediate termination.</li>
+                                <li><strong>Oversized Instances:</strong> Flags resources with less than 10% CPU or memory utilization and provides right-sizing recommendations.</li>
+                                <li><strong>Orphaned Snapshots:</strong> Locates backups of deleted instances for automated cleanup and archival.</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 pt-4">
+                            <div class="method-card method-card-wide">
+                            <h4>5. Secure, Real-Time Dashboard</h4>
+                            <p style="text-align: justify;">
+                                The user experience is centralized in a modern, React.js and Node.js-powered dashboard divided into three modules: a real-time anomaly panel with color-coded severity alerts, a predictive expenditure graph, and a secure configuration portal.
+                            </p>
+                            <p style="text-align: justify;">
+                                <strong>Zero Trust Security:</strong> We enforce strict role-based access control (RBAC). Every interaction is secured through an Identity-Aware Proxy, Multi-Factor Authentication (MFA), and comprehensive encryption for data at rest and in transit.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tech_used" class="sub-section">
+                    <h2>Technologies Used</h2>
+                    <div class="row technology mt-5">
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <p>Microsoft Azure</p>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <p>Node.js</p>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <p>React.js</p>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <p>Anomaly Detection</p>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <p>LSTM Forecasting</p>
+                        </div>
+                        <div class="col-md-2 col-sm-4 col-6 mb-5">
+                            <div class="avatar">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <p>Zero Trust Security</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="system-architecture" class="sub-section">
+                    <h2>System Architecture</h2>
+                    <div class="row mt-5">
+                        <div class="col-12 text-center">
+                            <img src="images/system.png" alt="FinSight system architecture" class="system-architecture-image">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Milestones -->
+        <section id="milestones" class="main-sections">
+            <div class="container">
+                <h5 class="section-headings">Milestones</h5>
+                <div class="sub-section">
+                    <h2>Timeline in Brief</h2>
+                    <div class="milestones">
+                        <ul class="timeline">
+                            <!-- Project Proposal -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Project Proposal</h3>
+                                    <p>A Project Proposal is presented to potential sponsors or clients to receive
+                                        funding or get your
+                                        project approved.</p>
+                                    <p><strong>Marks Allocated : </strong>6</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 6%"
+                                            aria-valuenow="12" aria-valuemin="0" aria-valuemax="100">6%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Progress Presentation I -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Progress Presentation I</h3>
+                                    <p>Progress Presentation I reviews the 50% completetion status of the project. This
+                                        reveals any gaps or
+                                        inconsistencies in the design/requirements.</p>
+                                    <p><strong>Marks Allocated : </strong>6</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 12%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 6%"
+                                            aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">6%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Research Paper -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Research Paper</h3>
+                                    <p>Describes what you contribute to existing knowledge, giving due recognition to
+                                        all work that you
+                                        referred in making new knowledge</p>
+                                    <p><strong>Marks Allocated : </strong>10</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 27%" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 10%"
+                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Progress Presentation II -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Progress Presentation II</h3>
+                                    <p>Progress Presentation II reviews the 90% completetion status demonstration of the
+                                        project. Along with
+                                        a Poster presesntation which describes the project as a whole.</p>
+                                    <p><strong>Marks Allocated : </strong>18</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 18%"
+                                            aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">18%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Website -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Website Assessment</h3>
+                                    <p>The Website helps to promote our research project and reveals all details related
+                                        to the project.</p>
+                                    <p><strong>Marks Allocated : </strong>2</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 2%"
+                                            aria-valuenow="2" aria-valuemin="0" aria-valuemax="100">2%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Logbook -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Logbook</h3>
+                                    <p>Status of the project is validated through the Logbook. This also includes,
+                                        Status documents 1 & 2.
+                                    </p>
+                                    <p><strong>Marks Allocated : </strong>3</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 3%"
+                                            aria-valuenow="4" aria-valuemin="0" aria-valuemax="100">3%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Final Report -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Final Report</h3>
+                                    <p>Final Report evalutes the completed project done throughout the year. Marks
+                                        mentioned below includes
+                                        marks for Individual & group reports and also Final report.</p>
+                                    <p><strong>Marks Allocated : </strong>19</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 61%" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 19%"
+                                            aria-valuenow="29" aria-valuemin="0" aria-valuemax="100">19%</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Viva -->
+                            <li class="timeline-event">
+                                <label class="timeline-event-icon"></label>
+                                <div class="timeline-event-copy">
+                                    <h3>Final Presentation & Viva</h3>
+                                    <p>Viva is held individually to assess each members contribution to the project.</p>
+                                    <p><strong>Marks Allocated : </strong>20</p>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-infinity-primary" role="progressbar"
+                                            style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 20%"
+                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Downloads -->
+        <section id="downloads" class="main-sections">
+            <div class="container">
+                <h5 class="section-headings">Downloads</h5>
+                <!-- Documents -->
+                <div class="sub-section">
+                    <h2>Documents</h2>
+                    <p>Please find all documents related to this project below.</p>
+                    <div class="row mt-sm-5 downloads-container">
+                        <!-- Topic Assessment -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Topic
+                                        Assessment</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/02/25</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                    <!-- <li class="list-group-item">Individual<a href="">Download</a></li> -->
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Project Charter -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Project
+                                        Charter</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/01/30</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                    <!-- <li class="list-group-item">Individual<a href="">Download</a></li> -->
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Project Proposal -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Project
+                                        Proposal</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/05/24</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Individual<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Status Documents -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Status
+                                        Documents I</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/05/22</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <!-- <li class="list-group-item">Group<a href="">Download</a></li> -->
+                                    <li class="list-group-item">Individual<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Status Documents -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Status
+                                        Documents II</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/09/06</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <!-- <li class="list-group-item">Group<a href="">Download</a></li> -->
+                                    <li class="list-group-item">Individual<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Research -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Research
+                                        Paper</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/06/20</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link" target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Final Report -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-pdf mr-2 download-pdf"></i>Final Report
+                                    </h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/09/10</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link" target="_blank">Download</a></li>
+                                    <li class="list-group-item">Individual<a href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link" target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!-- Poster -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-file-image mr-2 download-image"></i>Poster
+                                    </h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/09/04</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1ojQqHxSgCfRi_o1t9bkY2DMd30yVU04A?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Presentations -->
+                <div id="presentations" class="sub-section">
+                    <h2>Presentations</h2>
+                    <p>Please find all presentations related this project below.</p>
+                    <div class="row mt-sm-5 downloads-container">
+                        <!-- Project Proposal -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i
+                                            class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Project
+                                        Proposal</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/03/27</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1YpDGdl6AOCYeq1EEEhdq57DKvnr28QXV?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Progress Presentation I -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i
+                                            class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Progress
+                                        Presentation I</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/05/22</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1YpDGdl6AOCYeq1EEEhdq57DKvnr28QXV?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Progress Presentation II -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i
+                                            class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Progress
+                                        Presentation II</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/09/04</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a
+                                            href="https://drive.google.com/drive/folders/1YpDGdl6AOCYeq1EEEhdq57DKvnr28QXV?usp=drive_link"
+                                            target="_blank">Download</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Final Presentation -->
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i
+                                            class="fas fa-file-powerpoint mr-2 download-powerpoint"></i></i>Final
+                                        Presentation</h5>
+                                    <p class="card-text pt-sm-2">Submitted on 2023/10/30</p>
+                                </div>
+                                <ul class="download-items list-group list-group-flush">
+                                    <li class="list-group-item">Group<a href="https://drive.google.com/drive/folders/1YpDGdl6AOCYeq1EEEhdq57DKvnr28QXV?usp=drive_link" target="_blank">Download</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="main-sections " style="background-color:#FDFEFE">
+            <div class="container">
+                <h5 class="section-headings">About Us</h5>
+                <div class="sub-section about-us-container ">
+                    <h2>Meet Our Team !</h2>
+                    <div class="row mt-sm-5" style="justify-content: center">
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Nelum sir- Supervisor.jpeg" class="about-us-image supervisor" alt="Nelum Sir" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Nelum Sir</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Supervisor</span>
+                                    <div class="text-group">
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Junious sir - Co supervisor.jpeg" class="about-us-image cosupervisor" alt="Junious Sir" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Junious Sir</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Co-Supervisor</span>
+                                    <div class="text-group">
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-sm-4" style="justify-content: center">
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Sithmi - IT22324924.jpeg" class="about-us-image" alt="Sithmi" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Sithmi</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Group Member</span>
+                                    <div class="text-group">
+                                        <p><strong>Undergraduate</strong></p>
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                    <div class="text-group">
+                                        <p><strong>Student ID</strong></p>
+                                        <p>IT22324924</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Aloka IT22364456.jpeg" class="about-us-image" alt="Aloka" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Aloka</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Group Member</span>
+                                    <div class="text-group">
+                                        <p><strong>Undergraduate</strong></p>
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                    <div class="text-group">
+                                        <p><strong>Student ID</strong></p>
+                                        <p>IT22364456</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Oshadha - IT22915672.jpeg" class="about-us-image" alt="Oshadha" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Oshadha</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Group Member</span>
+                                    <div class="text-group">
+                                        <p><strong>Undergraduate</strong></p>
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                    <div class="text-group">
+                                        <p><strong>Student ID</strong></p>
+                                        <p>IT22915672</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-12">
+                            <div class="card about-us-card">
+                                <img src="images/team/Subodhi - IT22916976.jpeg" class="about-us-image" alt="Subodhi" height="20%" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Subodhi</h5>
+                                    </br>
+                                    <span class="badge badge-secondary">Group Member</span>
+                                    <div class="text-group">
+                                        <p><strong>Undergraduate</strong></p>
+                                        <p>Sri Lanka Institute of Information Technology</p>
+                                    </div>
+                                    <div class="text-group">
+                                        <p><strong>Student ID</strong></p>
+                                        <p>IT22916976</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" class="main-sections" style="background-color:#FDFEFE">
+            <div class="container">
+                <h5 class="section-headings">Contact Us</h5>
+                <div class="sub-section">
+                    <h2>Get in Touch</h2>
+                    <div class="row  mt-sm-5">
+                        <div class="col-md-6 col-sm-12 contact-form">
+                            <form action="https://formsubmit.co/cloudcost030@gmail.com" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message or Query</label>
+                                    <textarea class="form-control" name="message" id="message" rows="5"></textarea>
+                                </div>
+                                <button type="submit" class="btn btncolorgradient	">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-sm-12 contact-details">
+                            <div>
+                                <p><strong>Contact Details</strong></p>
+                                <p>For further queries please reach us at <a
+                                        href="mailto: cloudcost030@gmail.com">cloudcost030@gmail.com</a></p>
+                                <p>Hope this project helped you in some manner. Thank you!</p>
+                                <p>-Team FinSight </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script>
+        (function () {
+            "use strict";
+
+            var canvas = document.getElementById("hero-canvas");
+            if (!canvas) {
+                return;
+            }
+
+            var ctx = canvas.getContext("2d");
+            var points = [];
+            var mousePos = null;
+            var maxDist = 170;
+            var pointCount = 65;
+            var colour = "129,244,255";
+
+            function Point() {
+                this.x = (Math.random() * (canvas.width + maxDist)) - (maxDist / 2);
+                this.y = (Math.random() * (canvas.height + maxDist)) - (maxDist / 2);
+                this.vx = (Math.random() * 0.7) - 0.35;
+                this.vy = (Math.random() * 0.7) - 0.35;
+                this.dia = Math.random() * 2 + 1;
+            }
+
+            function setCanvasSize() {
+                var rect = canvas.parentElement.getBoundingClientRect();
+                canvas.width = Math.max(1, Math.floor(rect.width));
+                canvas.height = Math.max(1, Math.floor(rect.height));
+            }
+
+            function regeneratePoints() {
+                points = [];
+                for (var i = 0; i < pointCount; i++) {
+                    points.push(new Point());
+                }
+            }
+
+            function drawPoint(obj) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(" + colour + ")";
+                ctx.arc(obj.x, obj.y, obj.dia, 0, 2 * Math.PI);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            function updatePoint(obj) {
+                obj.x += obj.vx;
+                obj.y += obj.vy;
+
+                if (obj.x > canvas.width + (maxDist / 2)) {
+                    obj.x = -(maxDist / 2);
+                } else if (obj.x < -(maxDist / 2)) {
+                    obj.x = canvas.width + (maxDist / 2);
+                }
+
+                if (obj.y > canvas.height + (maxDist / 2)) {
+                    obj.y = -(maxDist / 2);
+                } else if (obj.y < -(maxDist / 2)) {
+                    obj.y = canvas.height + (maxDist / 2);
+                }
+            }
+
+            function collision(obj, dist) {
+                for (var i = 0; i < points.length; i++) {
+                    if (obj === points[i]) {
+                        continue;
+                    }
+
+                    var temp = Math.sqrt(Math.pow((obj.x - points[i].x), 2) + Math.pow((obj.y - points[i].y), 2));
+                    if (temp < dist) {
+                        ctx.beginPath();
+                        ctx.moveTo(obj.x, obj.y);
+                        ctx.strokeStyle = "rgba(" + colour + "," + (0.65 * Math.pow((dist - temp) / dist, 2.8)) + ")";
+                        ctx.lineTo(points[i].x, points[i].y);
+                        ctx.closePath();
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            function drawFrame() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                if (mousePos) {
+                    collision(mousePos, maxDist * 1.25);
+                    drawPoint(mousePos);
+                }
+
+                for (var i = 0; i < points.length; i++) {
+                    collision(points[i], maxDist);
+                    drawPoint(points[i]);
+                    updatePoint(points[i]);
+                }
+
+                requestAnimationFrame(drawFrame);
+            }
+
+            canvas.addEventListener("mousemove", function (evt) {
+                var rect = canvas.getBoundingClientRect();
+                mousePos = {
+                    x: evt.clientX - rect.left,
+                    y: evt.clientY - rect.top,
+                    dia: 2.4
+                };
+            });
+
+            canvas.addEventListener("mouseleave", function () {
+                mousePos = null;
+            });
+
+            window.addEventListener("resize", function () {
+                setCanvasSize();
+                regeneratePoints();
+            });
+
+            setCanvasSize();
+            regeneratePoints();
+            drawFrame();
+        })();
+    </script>
+</body>
+
+</html>
